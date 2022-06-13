@@ -1,0 +1,20 @@
+body {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%;
+    background-color: #f7f7f6;
+}
+
+button,
+p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.textoGris{
+color: #8c8c8c;
+}
+
+table{
+    margin-top: 15%;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/index.js" defer></script>
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+    <form>
+        <p><b>Para calcular su indice de masa corporal, ingrese su estatura y peso.</b></p>
+        <p class="textoGris">Sistema metrico</p>
+
+        <p><b>ESTATURA</b></p>
+        <p class="textoGris">en centimetros</p>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <input type="text" id="altura" class="form-control">
+            </div>
+        </div>
+
+        <p><b>PESO</b></p>
+        <p class="textoGris">en kilogramos</p>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <input type="text" id="peso" class="form-control">
+            </div>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary" onclick="CalculoFinal()">Calcular</button>
+        </div>
+
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <p type="text" class="col-sm-2 col-form-label">Resultado:</p>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="resultado" class="form-control" readonly>
+            </div>
+        </div>
+    </form>
+
+    <table class="table visually-hidden" id="tablaIMC">
+        <thead>
+            <tr id="principal">
+                <th scope="col">Composicion corporal</th>
+                <th scope="col">Indice de masa corporal (IMC)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="pesoInferior" class="visually-hidden">
+                <td>Peso Inferior</td>
+                <td>Menos de 18.5</td>
+            </tr>
+            <tr id="pesoNormal" class="visually-hidden">
+                <td>Normal</td>
+                <td>18.5 - 24.9</td>
+            </tr>
+            <tr id="pesoSuperior" class="visually-hidden">
+                <td>Peso superior al normal</td>
+                <td>24.9 - 29.9</td>
+            </tr>
+            <tr id="pesoObesidad" class="visually-hidden">
+                <td>Obesidad</td>
+                <td>Mas de 30.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
